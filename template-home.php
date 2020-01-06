@@ -44,7 +44,8 @@ while (have_posts()) : the_post(); ?>
                     $img = wp_get_attachment_image_src($post->ID, 'vertical-thumbnail');
                 }
                 ?>
-                <a rel="gallery" class="lightBox grid-item" href="<?php echo $image[0] ?>" title="">
+                <a rel="gallery" class="lightBox grid-item" style="width:<?php echo $img[1]*250/$img[2]?>px;flex-grow:<?php echo $img[1]*250/$img[2]?>" href="<?php echo $image[0] ?>" title="thaibinh-ecovillages">
+                    <i style="padding-bottom:<?php echo $img[2]/$img[1]*100?>%"></i>
                     <img src="<?php echo $img[0] ?>" alt="">
                 </a>
                 <?php

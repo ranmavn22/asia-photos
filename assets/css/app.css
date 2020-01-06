@@ -11,6 +11,9 @@
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+h1, h2, h3 {
+  font-weight: bold; }
+
 .rightHeader .btnShowMenu {
   display: none; }
 
@@ -69,8 +72,15 @@ html body {
 footer {
   background: #f7f7f7;
   padding: 20px 0; }
-  footer .widget ul li {
-    padding-bottom: 0; }
+  footer .widget ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    footer .widget ul li {
+      width: 50%;
+      padding-bottom: 0; }
 
 .listImages {
   margin: 0 5px; }
@@ -230,46 +240,36 @@ footer {
   .footerForm.tourForm.form p:nth-child(9) span:first-child {
     padding-right: 10px; }
 
-@media (max-width: 600px) {
-  .footerForm.tourForm.form span:first-child {
-    text-align: left; } }
-
-@media (max-width: 450px) {
-  .footerForm.form p:nth-child(8) span:first-child,
-  .footerForm.form p:nth-child(9) span:first-child,
-  .footerForm.form p:nth-child(7) span:first-child,
-  .footerForm.form span,
-  .footerForm span {
-    width: 100%;
-    padding: 0; }
-  .footerForm p {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-  html .footerForm p span:nth-child(2) {
-    padding-left: 0; }
-  .footerForm.form p:first-child span,
-  .footerForm.form span:first-child,
-  html .footerForm p span:first-child {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 5px;
-    padding-left: 0; }
-  .footerForm span {
-    padding-left: 5px;
-    margin-left: 0 !important; }
-  .footerForm p:first-child span {
-    width: 33%; }
-  .footerForm.form p:nth-child(8) span,
-  .footerForm.form p:nth-child(7) span {
-    width: 25%; }
-  .footerForm.form p:nth-child(9) span {
-    width: 30%; }
-  .footerForm.form p:nth-child(9) span:last-child {
-    width: 70%; } }
-
 .listImages .listItem {
   border-bottom: 1px solid #f1f1f1;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .listImages .listItem a {
+    margin: 2px;
+    position: relative;
+    display: block;
+    padding: 0; }
+    .listImages .listItem a i {
+      display: block; }
+    .listImages .listItem a img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      vertical-align: bottom;
+      -webkit-transition: 0.3s all;
+      -o-transition: 0.3s all;
+      transition: 0.3s all; }
+      .listImages .listItem a img:hover {
+        opacity: 0.7; }
+  .listImages .listItem::after {
+    content: '';
+    -webkit-box-flex: 999999999;
+    -ms-flex-positive: 999999999;
+    flex-grow: 999999999; }
 
 .listImages h2 {
   text-align: center;
@@ -304,3 +304,74 @@ footer {
     z-index: 99;
     padding: 0 20px;
     color: #5fb1a9; }
+
+.wpcf7-not-valid-tip {
+  width: 100% !important; }
+
+@media (max-width: 992px) {
+  .rightHeader .btnShowMenu {
+    display: inline-block; }
+  .rightHeader .mainMenu {
+    position: fixed;
+    top: 112px;
+    bottom: 0;
+    width: 300px;
+    right: -150%;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+    background: #fff;
+    border-top: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1; }
+    .rightHeader .mainMenu ul {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .rightHeader .mainMenu ul li {
+        display: block;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+        .rightHeader .mainMenu ul li a {
+          display: block;
+          padding: 10px 20px; }
+    .rightHeader .mainMenu.active {
+      right: 0; } }
+
+@media (max-width: 600px) {
+  .footerForm.tourForm.form span:first-child {
+    text-align: left; }
+  footer .widget ul li {
+    width: 100%; } }
+
+@media (max-width: 450px) {
+  .footerForm.form p:nth-child(8) span:first-child,
+  .footerForm.form p:nth-child(9) span:first-child,
+  .footerForm.form p:nth-child(7) span:first-child,
+  .footerForm.form span,
+  .footerForm span {
+    width: 100%;
+    padding: 0; }
+  .footerForm p {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  html .footerForm p span:nth-child(2) {
+    padding-left: 0; }
+  .footerForm.form p:first-child span,
+  .footerForm.form span:first-child,
+  html .footerForm p span:first-child {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 0; }
+  .footerForm span {
+    padding-left: 5px;
+    margin-left: 0 !important; }
+  .footerForm p:first-child span {
+    width: 33%; }
+  .footerForm.form p:nth-child(8) span,
+  .footerForm.form p:nth-child(7) span {
+    width: 25%; }
+  .footerForm.form p:nth-child(9) span {
+    width: 30%; }
+  .footerForm.form p:nth-child(9) span:last-child {
+    width: 70%; } }

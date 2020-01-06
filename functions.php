@@ -13,5 +13,5 @@ function wpdocs_theme_name_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
-add_image_size('horizontal-thumbnail', '330','220',true);
-add_image_size('vertical-thumbnail', '125','220', true);
+add_image_size('horizontal-thumbnail', '468','313',true);
+add_image_size('vertical-thumbnail', '235','312', true);
